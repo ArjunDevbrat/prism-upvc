@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prism UPVC Doors & Windows</title>
+  <meta name="description" content="UPVC Doors & Windows by Prism Enterprises – Premium Quality, Soundproof, Durable Solutions." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Chatbot Icon & Chatbox -->
+    <div class="chatbot-container" id="chatbot">
+      <div class="chatbot-header">💬 Ask Golu The Bot</div>
+      <div class="chatbot-messages" id="chatMessages">
+        <div class="message bot">Hi! How can I help you?</div>
+      </div>
+      <input type="text" id="userInput" placeholder="Type your question..." onkeypress="handleKey(event)">
+    </div>
+
+    <div class="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+  <!-- Header -->
+  <header>
+    <img src="image/prism.jpeg" alt="Prism Logo" class="logo" />
+    <div>
+      <h1>Prism Enterprises</h1>
+      <p>UPVC Doors & Windows Specialist</p>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <h2>Premium UPVC Doors & Windows</h2>
+    <p>Elegant, Durable, and Noise-Proof Solutions for Your Home & Office</p>
+    <a href="#calculator" class="cta-button">Get a Quote</a>
+  </section>
+
+  <!-- Slider -->
+  <section class="slider">
+    <div class="slides">
+      <img src="image/s1.png" alt="UPVC Product 1">
+      <img src="image/s3.jpeg" alt="UPVC Product 2">
+      <img src="image/s2.png" alt="UPVC Product 3">
+      <img src="image/s4.jpeg" alt="UPVC Product 4">
+      <img src="image/s5.png" alt="UPVC Product 5">
+      <img src="image/s6.png" alt="UPVC Product 6">
+    </div>
+  </section>
+
+  <!-- Products + About -->
+  <section class="main-section">
+    <div class="products">
+      <h2>Our Products</h2>
+      <div class="product-card">
+        <h3>Sliding UPVC Window</h3>
+        <img src="image/s6.png" alt="UPVC Product 6">
+        <p>Durable, soundproof, and weather-resistant with smooth sliding functionality.</p>
+      </div>
+      <div class="product-card">
+        <h3>Casement UPVC Door</h3>
+        <img src="image/s1.png" alt="UPVC Product 1">
+        <p>Secure, stylish, inward/outward opening – perfect for modern homes.</p>
+      </div>
+    </div>
+
+    <div class="about" id="about">
+  <h2>About Us</h2>
+  <p>
+    <strong>Prism Enterprises</strong> is a leading name in the UPVC Doors and Windows industry, committed to delivering innovative, eco-friendly, and long-lasting solutions to modern homes and businesses. With over <strong>10+ years of experience</strong>, we have established ourselves as a symbol of quality, durability, and trust.
+  </p>
+
+  <p>
+    Our products are crafted using state-of-the-art technology and adhere to the highest industry standards. Whether it’s sound insulation, thermal efficiency, or security, our UPVC doors and windows are designed to meet your every need with style and strength.
+  </p>
+
+  <p>
+    At Prism Enterprises, customer satisfaction is our top priority. With a track record of <strong>1000+ happy customers</strong> and a commitment to excellence, we continue to redefine quality in the UPVC segment. 
+    Every installation is backed by our <strong>5-Year Warranty</strong>, ensuring complete peace of mind.
+  </p>
+
+  <p>
+    We don’t just build windows and doors — we build lasting relationships based on transparency, innovation, and reliability.
+  </p>
+
+  <div class="about-badges">
+    <img src="image/5yr.png" alt="5-Year Warranty Badge" class="badge">
+    <img src="image/happyc.png" alt="1000+ Happy Customers Badge" class="badge">
+  </div>
+</div>
+
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-card">
+      <p>“Excellent quality and service! My house feels quieter and more stylish now.”</p>
+      <strong>- Rohit Verma, Lucknow</strong>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section id="calculator">
+    <h2>Window/Door Price Calculator</h2>
+    <div class="calculator">
+      <label for="width">Width (ft):</label>
+      <input type="number" id="width" />
+      <label for="height">Height (ft):</label>
+      <input type="number" id="height" />
+      <button onclick="calculatePrice()">Calculate Price</button>
+      <p id="result"></p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 +91-8340542601<br/>📧 support@prismenterprises.in</p>
+  </section>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/+918340542601" id="whatsapp-button" target="_blank">
+    WhatsApp Us
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Prism Enterprises. All rights reserved.</p>
+  </footer>
+
+  <script>
+  const predefinedAnswers = {
+  "hello": "Hello! 👋 Welcome to Prism Enterprises. How can we assist you today?",
+  "hi": "Hi there! 😊 We’re glad to see you. Do you want to know about our products, pricing, or services?",
+  "price": "Our UPVC doors and windows start at ₹550 per sq.ft. For an exact quote, please use the calculator or share your dimensions.",
+  "product": "We offer high-quality UPVC doors, sliding windows, casement systems, and more – all customizable to your needs.",
+  "services": "We provide consultation, installation, and after-sales support with a 5-year warranty.",
+  "location": "We are located in Patna, Bihar 📍 and deliver services across multiple cities.",
+  "contact": "📞 You can call us at +91-8340542601 or email us at support@prismenterprises.in",
+  "thanks": "You’re most welcome! 🙏 If you have any more questions, feel free to ask.",
+  "bye": "Goodbye! 👋 Have a great day ahead."
+};
+
+
+  function toggleChatbot() {
+    const chatbot = document.getElementById("chatbot");
+    chatbot.style.display = chatbot.style.display === "block" ? "none" : "block";
+  }
+
+  function handleKey(event) {
+    if (event.key === "Enter") {
+      const input = document.getElementById("userInput");
+      const msg = input.value.trim();
+      if (msg === "") return;
+
+      const messages = document.getElementById("chatMessages");
+      messages.innerHTML += `<div class="message user">${msg}</div>`;
+
+      const lowerMsg = msg.toLowerCase();
+      const reply = predefinedAnswers[lowerMsg] || "Sorry, I didn't understand that. Try 'product', 'price', or 'contact'.";
+      messages.innerHTML += `<div class="message bot">${reply}</div>`;
+      input.value = "";
+      messages.scrollTop = messages.scrollHeight;
+    }
+  }
+  
+  function calculatePrice() {
+    const width = parseFloat(document.getElementById('width').value);
+    const height = parseFloat(document.getElementById('height').value);
+
+    if (isNaN(width) || isNaN(height)) {
+      document.getElementById('result').textContent = "❗ Please enter valid dimensions.";
+      return;
+    }
+
+    const area = width * height;
+    const pricePerSqFt = 550; // You can change this value
+    const total = area * pricePerSqFt;
+
+    document.getElementById('result').textContent = 
+      `🧮 Estimated Price: ₹${total.toLocaleString()} for ${area} sq.ft`;
+  }
+
+
+</script>
+
+
+
+</body>
+</html>
