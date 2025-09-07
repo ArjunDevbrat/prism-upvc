@@ -258,4 +258,24 @@ footer {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .container {
+    flex-direction: column; /* agar flex use ho raha hai to */
+  }
+
+  header, footer {
+    text-align: center;
+  }
+}
+
+
 
