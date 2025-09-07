@@ -262,18 +262,40 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* Mobile responsive adjustments */
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .container {
-    flex-direction: column; /* agar flex use ho raha hai to */
-  }
-
-  header, footer {
+  header {
+    flex-direction: column;
     text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-section {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .products img, .about img, .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .slider img {
+    max-height: 180px;
+  }
+
+  .calculator input, .calculator button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .chatbot-container {
+    width: 90%;
+    right: 5%;
   }
 }
 
